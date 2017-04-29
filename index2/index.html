@@ -1,0 +1,176 @@
+<html>
+ 
+ <head>
+     <meta charset="utf-8">
+     <title>SAO角色創立系統</title>
+     <style media="screen">
+       .number {
+         background-color: #33FFAA;
+         color: #000;
+         height: 30px;
+         width: 30px;
+         display: inline-block;
+         font-size: 0.8em;
+         margin-right: 4px;
+         line-height: 30px;
+         text-align: center;
+         text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+         border-radius: 100%;
+       }
+       label{
+         font-size: 18px;
+		 color: #FFFFFF;
+		 background: rgba(0%,0%,0%,0.6);
+       }
+       input[type="text"],
+       input[type="date"],
+       textarea,
+       select{
+        
+         border: none;
+         font-size: 16px;
+        height: auto;
+         margin: 0;
+         outline: 0;
+         padding: 15px;
+         width: 100%;      
+		 background: rgba(50%,50%,80%,0.6);
+         color: #770077;
+         box-shadow: 0 1px 0 rgba(25%,25%,50%,0.03) inset;
+         margin-bottom: 30px;
+       }
+       input[type="submit"]{
+         padding: 9px 39px 8px 39px;
+         color: #BBFFEE;
+         background-color: #4bc970;
+         font-size: 18px;
+         text-align: center;
+         font-style: normal;
+         border-radius: 10px;
+         width: 49%;
+         border: 1px groove #3ac162;
+         border-width: 1px 1px 3px;
+         box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+         margin-bottom: 10px;
+       }
+	   
+        input[type="reset"]{
+         padding: 9px 39px 8px 39px;
+         color: #99BBFF;
+         background-color: #000044;
+         font-size: 18px;
+         text-align: center;
+         font-style: normal;
+         border-radius: 10px;
+         width: 49%;
+         border: 1px groove #000022;
+         border-width: 1px 1px 3px;
+         box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+         margin-bottom: 10px;
+       }
+	   
+	 fieldset { 
+	 border:1px groove
+     color: #FFFF77;
+	 border-style:dotted
+	 }
+	   
+       legend{
+         font-size: 1.4em;
+		 color:#D28EFF;
+		 background: rgba(0%,0%,0%,0.4);
+       }
+      h1{
+         font-family: 'Nunito', sans-serif;
+         color: #0066FF;
+         margin: 0 0 30px 0;
+         text-align: center;
+		 font-size: 80px;
+		 background: rgba(0%,0%,0%,0.4);
+       }
+       form{
+         width: 40%;
+         margin-left: auto;
+         margin-right: auto;
+       }
+       select {
+         overflow-y: hidden;
+       }
+
+    </style>
+</head>
+ 
+ <body style=background-image:url('背景.jpg');>
+     <form name="form1" align="left" action="tt.jsp" method="post">
+       <h1>歡迎來到艾恩葛朗特</h1>
+       <fieldset>
+         <legend><span class="number">☆</span>你的資料</legend>
+         <label>角色名稱：</label>
+         <br><br>
+         <INPUT name="username" id="" type=text size=10 maxlength=20>
+         <br>
+         <label>性別：</label>
+         <br><br>
+        <INPUT name="sex" type=radio value="男" checked><label>男</label>
+         <INPUT name="sex" type=radio value="女"><label>女</label>
+         <br><br>
+         <label>出生年月日：</label>
+         <br><br>
+         <INPUT name="birth" type=date>
+         <br><br>
+        <label>居住地：</label>
+         <br><br>
+         <input name="address" type=text size=10 maxlength=50>
+       </fieldset>
+       <br><br>
+       <fieldset>
+         <legend><span class="number">☆</span>角色能力</legend>
+         <br><br>
+         <label>主武器：</label>
+         <br><br>
+         <select name="weapon">
+             <option value="劍盾">劍盾</option>
+             <option value="細劍">劍盾</option>
+             <option value="戰錘">戰錘</option>
+             <option value="武士刀">武士刀</option>
+             <option value="短劍">短劍</option>
+			 <option value="雙刀">雙刀</option>
+         </select>
+         <br><br>
+         <label>生活技能：</label>
+         <br><br>
+         <select name="skill" size="4" multiple>
+             <option value="料理">料理</option>
+             <option value="鍛造">鍛造</option>
+             <option value="煉金">煉金</option>
+             <option value="釣魚">釣魚</option>
+         </select>
+         <br><br>
+
+         <label>特技（可複選）：</label>
+         <br><br>
+         <INPUT name="talent" type=checkbox value="精靈夥伴"><label>精靈夥伴</label>
+         <INPUT name="talent" type=checkbox value="投針"><label>投針</label>
+         <INPUT name="talent" type=checkbox value="嘲諷"><label>嘲諷</label>
+         <INPUT name="talent" type=checkbox value="自動回血"><label>自動回血</label>
+         <br><br>
+		  <label>陣營：</label>
+	     <br><br>
+		 <INPUT name="kind" type=radio value="善良" checked><label>善良</label>
+		 <INPUT name="kind" type=radio value="中立" checked><label>中立</label>
+		 <INPUT name="kind" type=radio value="邪惡" checked><label>邪惡</label>
+		 <br><br>
+         <label>留言欄(可隨時更動)：</label>
+         <br><br>
+         <textarea name="note" type=textarea cols="50" rows="10"></textarea>
+         <br><br>
+         <input type="submit" value="送出"></input>
+         <input type="reset" value="重新輸入" ;></input>
+       </fieldset>
+     </form>
+ </body>
+ 	  <audio controls autoplay="autoplay" style="visibility:hidden" >
+<source src="BM4.mp3" type="audio/mp3" >
+</audio>
+<div style="background-image:url(F.png);width:1914px;height:73px;"></div> 
+ </html>
